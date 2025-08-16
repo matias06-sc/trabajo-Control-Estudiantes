@@ -1,0 +1,48 @@
+<h1>CRUD de Estudiantes</h1>
+
+<!-- Formulario para crear estudiante -->
+<form method="POST" action="{% url 'crear_estudiante' %}">
+    {% csrf_token %}
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="carrera" placeholder="Carrera" required>
+    <input type="text" name="ciclo" placeholder="Ciclo" required>
+    <input type="email" name="correo" placeholder="Correo" required>
+    <button type="submit">Agregar</button>
+</form>
+
+<hr>
+
+<!-- Listado de estudiantes -->
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Carrera</th>
+        <th>Ciclo</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+    {% for estudiante in estudiantes %}
+    <tr>
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.carrera }}</td>
+        <td>{{ estudiante.ciclo }}</td>
+        <td>{{ estudiante.correo }}</td>
+        <td>
+            <!-- Editar -->
+            <a href="{% url 'editar_estudiante' estudiante.id %}">Editar</a>
+            <!-- Eliminar -->
+            <a href="{% url 'eliminar_estudiante' estudiante.id %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h1>Editar Estudiante</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="nombre" value="{{ estudiante.nombre }}" required>
+    <input type="text" name="carrera" value="{{ estudiante.carrera }}" required>
+    <input type="text" name="ciclo" value="{{ estudiante.ciclo }}" required>
+    <input type="email" name="correo" value="{{ estudiante.correo }}" required>
+    <button type="submit">Actualizar</button>
+</form>
+
