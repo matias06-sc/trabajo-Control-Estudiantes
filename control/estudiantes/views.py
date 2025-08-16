@@ -52,7 +52,7 @@ def editar_estudiante(request, id):
                 'estudiante': estudiante,
                 'error': f"El correo {estudiante.correo} ya está registrado."
             })
-    return render(request, 'estudiantes/lista.html', {'estudiante': estudiante})
+    return render(request, 'estudiantes/editar.html', {'estudiante': estudiante})
 
 # Eliminar estudiante
 def eliminar_estudiante(request, id):
