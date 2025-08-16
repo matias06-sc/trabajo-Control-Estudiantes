@@ -93,7 +93,7 @@ Proyecto Control Estudiantes/
 ### 1. **Clonar el repositorio**
 ```bash
 git clone <URL_DEL_REPOSITORIO>
-cd control-estudiantes
+cd trabajo-Control-Estudiantes
 ```
 
 ### 2. **Crear entorno virtual**
@@ -128,6 +128,7 @@ python manage.py runserver
 ## 📝 Historias de Usuario y Criterios de Aceptación
 
 📌 **HU-01: Registrar Estudiante**
+
 Historia: Registrar nuevos estudiantes para mantener la base de datos actualizada.
 
 **Criterios de aceptacion:**
@@ -136,6 +137,7 @@ Historia: Registrar nuevos estudiantes para mantener la base de datos actualizad
   - Formulario con nombre, carrera, ciclo y correo.
 
 📌 **HU-02: Ver Estudiantes**
+
 Historia: Consultar la lista de estudiantes registrados.
 
 **Criterios de aceptacion:**
@@ -143,6 +145,7 @@ Historia: Consultar la lista de estudiantes registrados.
   - Ordenar alfabéticamente.
 
 📌 **HU-03: Editar Estudiantes**
+
 Historia: Actualizar datos de un estudiante.
 
 **Criterios de aceptacion:**
@@ -151,6 +154,7 @@ Historia: Actualizar datos de un estudiante.
   - Mostrar error si hay datos inválidos.
 
 📌 **HU-04: Eliminar Estudiantes**
+
 Historia: Borrar estudiantes innecesarios.
 
 **Criterios de aceptacion:**
@@ -158,6 +162,7 @@ Historia: Borrar estudiantes innecesarios.
   - Eliminación directa del registro.
 
 📌 **HU-05: Filtrar Estudiantes**
+
 Historia: Buscar registros de forma rápida.
 
 **Criterios de aceptacion:**
@@ -166,6 +171,7 @@ Historia: Buscar registros de forma rápida.
   - Botón de filtrar.
 
 📌 **HU-06: Interfaz Agradable**
+
 Historia: Usar un diseño claro y entendible.
 
 **Criterios de aceptacion:**
