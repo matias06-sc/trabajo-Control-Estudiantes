@@ -1,4 +1,5 @@
 # Trabajo Control de Estudiantes
+Sistema web desarrollado con Django que permite la gestión de estudiantes, implementando un CRUD completo (crear, visualizar, actualizar y eliminar), con almacenamiento en base de datos y una interfaz sencilla basada en HTML y CSS.
 
 ## 🎯 Product Backlog
 Desarrollar un sistema que permita:
@@ -17,11 +18,12 @@ El objetivo del sprint es desarrollar y validar un sistema de control de estudia
 | Rol            | Integrante           | Función principal                                                                                                 |
 |----------------|---------------------|------------------------------------------------------------------------------------------------------------------|
 | Scrum Master   | Matias Sicha    | Facilita el proceso Scrum, elimina impedimentos y asegura que el equipo siga los principios ágiles.              |
-| Product Owner  | Daniel Torres     |                         |
-| Developer 1    | Rodrigo Guerra      |                                   |
-| Developer 2    | Juan     |                                     |
-| Developer 3    | Josue Castillo  |       |
-| Developer 4    |   |   |
+| Developer 1  | Daniel Torres     |                         |
+| Developer 2    | Rodrigo Guerra      |                                   |
+| Developer 3    | Juan     |                                     |
+| Developer 4    | Josue Castillo  |       |
+| Developer 5    |   |   |
+| Developer 6    |   |   |
 
 ## 🎯 Características Principales
 ### ✅ **Funcionalidades CRUD**
@@ -85,5 +87,90 @@ Proyecto Control Estudiantes/
   - 🎥 Video
   - 📄 Documentacion:
   - 🔗 Link del Drive:
+ 
+## 🚀 Instalación y Configuración
+
+### 1. **Clonar el repositorio**
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd control-estudiantes
+```
+
+### 2. **Crear entorno virtual**
+```bash
+python -m venv venv
+```
+
+### 3. **Activar entorno virtual**
+```bash
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+```
+
+### 4. **Instalar dependencias**
+```bash
+pip install -r requirements.txt
+```
+
+### 5. **Configurar la base de datos**
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 6. **Ejecutar el servidor**
+```bash
+python manage.py runserver
+```
+
+## 📝 Historias de Usuario y Criterios de Aceptación
+
+📌 **HU-01: Registrar Estudiante**
+Historia: Registrar nuevos estudiantes para mantener la base de datos actualizada.
+
+**Criterios de aceptacion:**
+  - Guardar registros en la base de datos.
+  - Visualizar el nuevo estudiante en la lista.
+  - Formulario con nombre, carrera, ciclo y correo.
+
+📌 **HU-02: Ver Estudiantes**
+Historia: Consultar la lista de estudiantes registrados.
+
+**Criterios de aceptacion:**
+  - Mostrar tabla con todos los registros.
+  - Ordenar alfabéticamente.
+
+📌 **HU-03: Editar Estudiantes**
+Historia: Actualizar datos de un estudiante.
+
+**Criterios de aceptacion:**
+  - Opción de modificar en cada registro.
+  - Guardar cambios en la base.
+  - Mostrar error si hay datos inválidos.
+
+📌 **HU-04: Eliminar Estudiantes**
+Historia: Borrar estudiantes innecesarios.
+
+**Criterios de aceptacion:**
+  - Botón de eliminar en la tabla.
+  - Eliminación directa del registro.
+
+📌 **HU-05: Filtrar Estudiantes**
+Historia: Buscar registros de forma rápida.
+
+**Criterios de aceptacion:**
+  - Campo de texto para nombre.
+  - Combobox para carrera y ciclo.
+  - Botón de filtrar.
+
+📌 **HU-06: Interfaz Agradable**
+Historia: Usar un diseño claro y entendible.
+
+**Criterios de aceptacion:**
+  - Texto legible.
+  - Filas de tabla alternadas en blanco y gris.
+  - Botones con colores llamativos.
 
 
