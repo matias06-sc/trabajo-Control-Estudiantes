@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.db import IntegrityError   # 👈 importa esto
 from .models import Estudiante
 
 # Lista todos los estudiantes
@@ -13,9 +14,25 @@ def crear_estudiante(request):
         carrera = request.POST['carrera']
         ciclo = request.POST['ciclo']
         correo = request.POST['correo']
-        Estudiante.objects.create(nombre=nombre, carrera=carrera, ciclo=ciclo, correo=correo)
-        return redirect('lista_estudiantes')
-    return render(request, 'estudiantes/lista.html')   # 👈 corregido
+
+        try:
+            Estudiante.objects.create(
+                nombre=nombre,
+                carrera=carrera,
+                ciclo=ciclo,
+                correo=correo
+            )
+            return redirect('lista_estudiantes')
+        except IntegrityError:
+            estudiantes = Estudiante.objects.all()
+            return render(request, 'estudiantes/lista.html', {
+                'estudiantes': estudiantes,
+                'error': f"El correo {correo} ya está registrado."
+            })
+
+    return render(request, 'estudiantes/lista.html', {
+        'estudiantes': Estudiante.objects.all()
+    })
 
 # Editar estudiante
 def editar_estudiante(request, id):
@@ -25,8 +42,16 @@ def editar_estudiante(request, id):
         estudiante.carrera = request.POST['carrera']
         estudiante.ciclo = request.POST['ciclo']
         estudiante.correo = request.POST['correo']
-        estudiante.save()
-        return redirect('lista_estudiantes')
+        try:
+            estudiante.save()
+            return redirect('lista_estudiantes')
+        except IntegrityError:
+            estudiantes = Estudiante.objects.all()
+            return render(request, 'estudiantes/lista.html', {
+                'estudiantes': estudiantes,
+                'estudiante': estudiante,
+                'error': f"El correo {estudiante.correo} ya está registrado."
+            })
     return render(request, 'estudiantes/lista.html', {'estudiante': estudiante})
 
 # Eliminar estudiante
