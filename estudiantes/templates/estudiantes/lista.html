@@ -1,7 +1,8 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'Diseño/estilo.css' %}">
 
-<h1>CRUD de Estudiantes</h1>
+<h1 class="titulo-principal">📚 CRUD de Estudiantes</h1>
+
 
 <!-- Formulario para crear estudiante -->
 <form method="POST" action="{% url 'crear_estudiante' %}">
@@ -10,7 +11,10 @@
     <input type="text" name="carrera" placeholder="Carrera" required>
     <input type="text" name="ciclo" placeholder="Ciclo" required>
     <input type="email" name="correo" placeholder="Correo" required>
-    <button type="submit">Agregar</button>
+    
+    <div style="text-align: center; margin-top: 10px;">
+        <button type="submit">Agregar</button>
+    </div>
 </form>
 
 <hr>
@@ -31,8 +35,9 @@
         <td>{{ estudiante.ciclo }}</td>
         <td>{{ estudiante.correo }}</td>
         <td>
-            <a href="{% url 'editar_estudiante' estudiante.id %}">Editar</a>
-            <a href="{% url 'eliminar_estudiante' estudiante.id %}">Eliminar</a>
+             <a href="{% url 'editar_estudiante' estudiante.id %}" class="btn-editar">Editar</a>
+             <a href="{% url 'eliminar_estudiante' estudiante.id %}" class="btn-eliminar">Eliminar</a>
+
         </td>
     </tr>
     {% empty %}
