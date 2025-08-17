@@ -1,3 +1,4 @@
+/* --- Estilos Generales --- */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
@@ -13,6 +14,39 @@ h1 {
     border-radius: 5px;
 }
 
+/* Título principal estilizado */
+.titulo-principal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea inferior animada del título */
+.titulo-principal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #ff9800, #f44336, #2196F3, #4CAF50);
+    animation: moverLinea 4s linear infinite;
+}
+
+@keyframes moverLinea {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* --- Formularios --- */
 form {
     max-width: 500px;
     margin: 20px auto;
@@ -22,6 +56,7 @@ form {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Inputs */
 input[type="text"],
 input[type="email"] {
     width: 100%;
@@ -32,6 +67,7 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
+/* Botón Agregar y general */
 button {
     background-color: #3498db;
     color: white;
@@ -45,46 +81,127 @@ button:hover {
     background-color: #2980b9;
 }
 
+/* Centrar botón Agregar */
+.form-centro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* --- Tabla de Estudiantes --- */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
+/* Encabezado */
 th {
     background-color: #2c3e50;
     color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Celdas */
+td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Filas alternadas */
+tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
 }
 
+/* Hover sobre la fila */
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #d0e6f7;
+    transition: background-color 0.3s ease;
 }
 
-a {
-    color: #e74c3c;
+/* Bordes entre celdas suaves */
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Centrar botones dentro de la tabla */
+td a {
+    margin-right: 5px;
     text-decoration: none;
-    margin-right: 10px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Botón Editar */
+.btn-editar {
+    background-color: #2ecc71; /* verde */
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 20px 0;
+.btn-editar:hover {
+    background-color: #27ae60; /* verde más oscuro */
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background-color: #e74c3c; /* rojo */
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b; /* rojo más oscuro */
+}
+
+/* --- Formulario de Editar Estudiante --- */
+.form-estudiante {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Inputs de formulario editar */
+.form-estudiante input {
+    margin-bottom: 12px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-estudiante input:focus {
+    border-color: #3498db;
+}
+
+/* Botón Actualizar */
+.btn-actualizar {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-actualizar:hover {
+    background-color: #2980b9;
 }
