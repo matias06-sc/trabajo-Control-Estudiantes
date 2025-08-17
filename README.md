@@ -19,11 +19,10 @@ El objetivo del sprint es desarrollar y validar un sistema de control de estudia
 |----------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Scrum Master   | Matias Sicha    | Facilita el proceso Scrum, elimina impedimentos y asegura que el equipo siga los principios ágiles.              |
 | Developer 1  | Daniel Torres     | Desarrolla la estructura de las plantillas HTML para la interfaz de usuario.                        |
-| Developer 2    | Rodrigo Guerra      | Responsable de las pruebas de funcionamiento, validación de los criterios de aceptación y aseguramiento de la calidad del sistema.    |
+| Developer 2    | Rodrigo Guerra      |  Diseña y desarrolla los estilos CSS personalizados en la carpeta static/Diseño para complementar las plantillas HTML.   |
 | Developer 3    | Juan Solis    | Implementa pruebas automatizadas bajo metodología TDD y desarrolla parte de la lógica del CRUD; además, participa en pair programming junto a Kevin.  |
 | Developer 4    | Josue Castillo  | Se encarga de la configuración del proyecto Django, modelos y lógica principal del backend.      |
 | Developer 5    | Kevin Yupanqui  | Apoya en la construcción de pruebas TDD junto a Juan, colabora en la integración de módulos y participa en pair programming para mejorar la calidad del código.  |
-| Developer 6    | Falta nombre   | Diseña y desarrolla los estilos CSS personalizados en la carpeta static/Diseño para complementar las plantillas HTML.  |
 
 ## 🎯 Características Principales
 ### ✅ **Funcionalidades CRUD**
