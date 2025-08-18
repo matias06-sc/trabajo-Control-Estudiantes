@@ -75,7 +75,6 @@ Proyecto Control Estudiantes/
 └── README.md                # Documentación
 ```
 
-## 🌐 Enlace al sitio web
 
 ## Enlace del Trello
 - https://trello.com/b/HN5WNBA9/django-control-de-estudiantes
