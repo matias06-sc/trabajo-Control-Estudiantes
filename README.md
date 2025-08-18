@@ -81,11 +81,11 @@ Proyecto Control Estudiantes/
 - https://trello.com/b/HN5WNBA9/django-control-de-estudiantes
 
 ## 🎥 Video explicativo (entregado por Drive):
-- Nombre de la carpeta: 
+- Nombre de la carpeta: Proyecto-control-de-estudiantes
 - Contenido:
   - 🎥 Video
-  - 📄 Documentacion:
-  - 🔗 Link del Drive:
+  - 📄 Documentacion
+  - 🔗 Link del Drive: https://drive.google.com/file/d/1kgCy2CoxxvS8mY_PhN2RqS5VCB6n5ihC/view?usp=sharing
  
 ## 🚀 Instalación y Configuración
 
